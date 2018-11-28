@@ -85,7 +85,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-parent</artifactId>
-				<version>Camden.SR7</version>
+				<version>Finchley.RELEASE</version>
 				<exclusions>
 					<exclusion>
 						<groupId>org.springframework.boot</groupId>
@@ -109,12 +109,30 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<!-- 引入 spring-boot插件模块 -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>common-controller</module>
 		<module>common-core</module>
 		<module>common-service</module>
+		<module>common-eureka-server</module>
+		<module>common-user-service</module>
 	</modules>
 </project>

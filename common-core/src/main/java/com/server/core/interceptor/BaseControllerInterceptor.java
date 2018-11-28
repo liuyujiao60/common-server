@@ -14,7 +14,6 @@ public class BaseControllerInterceptor implements HandlerInterceptor{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("请求预处理。。。");
 		return true;
 	}
 
@@ -28,7 +27,6 @@ public class BaseControllerInterceptor implements HandlerInterceptor{
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("请求处理结束！");
 	}
 
 }

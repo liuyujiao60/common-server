@@ -8,7 +8,6 @@
 		<property name="PATTERN1">%d{HH:mm:ss.SSS} %-5level - %msg%xEx%n
 		</property>
 		<property name="PATTERN3">%m%n</property>
-		<property name="logpath">/markonly/server</property>
 	</properties>
 
 	<Appenders>
@@ -16,8 +15,8 @@
 			<PatternLayout pattern="${PATTERN1}" />
 		</Console>
         
-        <RollingFile name="requestInfo" fileName="/markonly/logs/requestInfo.log"
-			filePattern="/markonly/logs/requestInfo_%d{yyyy-MM-dd}_%i.log">
+        <RollingFile name="requestInfo" fileName="~/common-server/logs/requestInfo.log"
+			filePattern="~/common-server/logs/requestInfo_%d{yyyy-MM-dd}_%i.log">
 			<ThresholdFilter level="info" onMatch="ACCEPT"
 				onMismatch="DENY" />
 			<PatternLayout pattern="%m%n" />
